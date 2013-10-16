@@ -5,23 +5,25 @@ import ()
 // TODO What identifies a unique address?
 
 type Address struct {
-	Id        int64
-	Full      string
-	Number    int
-	Fraction  string
-	Prefix    string
-	Street    string
-	Type      string
-	Suffix    string
-	Unit      string
-	City      string // aka Muni
-	County    string
-	State     string // Index 10
-	Zip       int
-	Zip4      int
-	Latitude  float64
-	Longitude float64
+	Id        int64   `json:"id"`
+	Full      string  `json:"address"`
+	Number    int     `json:"number"`
+	Fraction  string  `json:"fraction"`
+	Prefix    string  `json:"prefix"`
+	Street    string  `json:"street"`
+	Type      string  `json:"type"`
+	Suffix    string  `json:"suffix"`
+	Unit      string  `json:"unit"`
+	City      string  `json:"city"` // aka Muni
+	County    string  `json:"county"`
+	State     string  `json:"state"` // Index 10
+	Zip       int     `json:"zip"`
+	Zip4      int     `json:"zip4"`
+	Latitude  float64 `json:"latitude"`
+	Longitude float64 `json:"longitude"`
 }
+
+// TODO A create table statement for postgres
 
 func (address *Address) String() string {
 	return address.Full
