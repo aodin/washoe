@@ -1,4 +1,4 @@
-washoe
+Washoe
 ======
 
-An API for Washoe County, Nevada property
+An API for Washoe County, Nevada property.
